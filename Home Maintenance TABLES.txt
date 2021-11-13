@@ -1,0 +1,79 @@
+create table Customer (
+    customerId    varchar(35)  NOT NULL,
+    name  varchar(25) NOT NULL,
+    phone varchar(10) NOT NULL,
+    email varchar(25) NOT NULL,
+    city varchar(8) NOT NULL,
+    address varchar(50) NOT NULL,
+    PRIMARY KEY (customerId)
+);
+
+create table service (
+    serviceName varchar(10)  NOT NULL,
+    serviceCode varchar(10) NOT NULL,
+    PRIMARY KEY (serviceCode, serviceName)
+);
+
+
+create table department(
+    departmentNo varchar(2) NOT NULL,
+    serviceName varchar(10)  NOT NULL,
+    serviceCode varchar(10) NOT NULL,
+    PRIMARY KEY (departmentNo),
+    FOREIGN KEY (serviceCode) references service(serviceCode)
+);
+
+create table employee (
+    employeeCompanyId varchar(8)  NOT NULL,
+    name varchar(35)  NOT NULL,
+    salary varchar(10)  NOT NULL,
+    serviceCode varchar(10) NOT NULL,
+    departmentNo varchar(2) NOT NULL,
+
+    PRIMARY KEY (employeeCompanyId),
+    FOREIGN KEY (serviceCode) references service(serviceCode),
+    FOREIGN KEY (departmentNo) references department(departmentNo)
+);
+
+create table AC(
+    AC_No varchar(25) NOT NULL,
+    AC_type varchar(25) NOT NULL,
+    price  varchar(3) NOT NULL,
+    serviceCode varchar(10) NOT NULL,
+    departmentNo varchar(2) NOT NULL,
+    NoOfWorker int(2) NOT NULL,
+
+   PRIMARY KEY (AC_No),
+    FOREIGN KEY (serviceCode) references service(serviceCode),
+    FOREIGN KEY (departmentNo) references department(departmentNo)
+);
+
+
+create table Painting(
+    serviceCode varchar(10) NOT NULL,
+    paintingType varchar(50) NOT NULL,
+    paintingNo varchar(3) NOT NULL,
+    price  varchar(3)  NOT NULL,
+    departmentNo varchar(2) NOT NULL,
+    NoOfWorker int(2) NOT NULL,
+
+    PRIMARY KEY (paintingNo),
+    FOREIGN KEY (serviceCode) references service(serviceCode),
+    FOREIGN KEY (departmentNo) references department(departmentNo)
+);
+
+
+create table booking (
+    bookNo varchar(10) NOT NULL,
+    bookingDetails varchar(100);
+    serviceCode varchar(10) NOT NULL,
+    departmentNo varchar(2) NOT NULL,
+    customerId    varchar(25)  NOT NULL,
+
+    PRIMARY KEY (bookNo),
+    FOREIGN KEY (serviceCode) references service(serviceCode),
+    FOREIGN KEY (customerId) references customer(customerId),
+    FOREIGN KEY (departmentNo) references department(departmentNo)
+);
+
+

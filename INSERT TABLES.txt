@@ -1,0 +1,48 @@
+insert into customer values ("784-1970-2343434-2", "Ahmed", "0552633488", "Ahmed70@gmail.com", "near Rak Mall", "RAK"),
+ ("784-1985-2342935-1", "Ali", "0552643978", "Ali85@gmail.com", "near The Dubai Mall", "Dubai"), 
+("784-1997-2342937-3", "Fatima", "0552645432", "Fatima97@gmail.com", "near Al Naeem Mall", "RAK"),
+ ("784-2000-2004124-4", "Rashed", "0584633278","Rashed20@gmail.com", "near Manar Mall", "RAK"),
+ ("784-2001-1319348-5", "Abd Al Rahman", "0587633409","AbdAlRahman21@gmail.com", 
+"near Dubai Shopping Center", "Dubai");
+
+
+SERVICE:
+ insert into service values ("AC", "01"), ("Painting", "02");
+
+insert into department values ("A1", "AC", "01");
+insert into department values ("A2", "AC", "01"), ("B1", "Painting", "02"), ("B2", "Painting", "02");
+insert into employee values ( "HM000124", "Mohammed Ahmed", "4000", "01", "A1"),
+ ("HM000125", "Hussein Ahmed", "4000", "01", "A1"),
+ ("HM000126", "Saleh Yassin", "4000", "01", "A1"),
+ ("HM000127", "Masoud Saleh", "3000", "01", "A2"),
+ ( "HM000128", "Raouf Abdulrahman", "3000", "01", "A2"),
+ ( "HM000129", "Wael Yassin", "3000", "01", "A2"),
+ ( "HM000130", "Mahmoud Hussein", "3000", "01", "A2"),
+ ( "HM000139", "Hussein Abdulrahman", "3500", "02", "B1"), 
+( "HM000140", "Abdullah Ahmed", "3500", "02", "B1"),
+ ( "HM000141", "Ahmed Yassin", "3500", "02", "B1"), 
+( "HM000142", "Saleh Wael", "3500","02", "B1"), 
+( "HM000143", "Mohammed Hussein",  "4500", "02", "B2"), 
+( "HM000144", "Mahmoud Yassin", "4500", "02", "B2"), 
+( "HM000145", "Hussein Mohammed", "4500", "02", "B2"), 
+( "HM000146", "Abdulrahman Ahmed", "4500", "02", "B2");
+
+
+insert into ac values ("1.1", "AC installation", 100, "01", "A1", 4),
+ ("1.2", "AC maintenance", 150, "01",  "A1", 4),
+ ("1.3", "Freon charging", 60, "01", "A1", 2),
+ ("1.4", "AC cleaning", 30, "01", "A2", 2),
+ ("1.5", "water leakage treatment", 30, "01","A2", 2);
+insert into painting values ("02", "plastic paint per meter", "2.1", 25, "B1", 4),
+ ("02", "wall painting in meters", "2.2", 30, "B1", 4),
+ ("02", "wallpaper removal", "2.3", 60, "B1", 4),
+ ("02", "3d painting on wall per 3 meter", "2.4", 450, "B2", 4), 
+("02", "3d painting on floor per 3 meter", "2.5", 600, "B2", 4);
+
+ insert into booking values ("1345437681", "01", "A1", "784-1970-2343434-2", "AC installation ( Install 2 LG AC & 1 Carrier AC)"),
+("1345374933", "02", "B1", "784-1985-2342935-1", "Rust-Oleum Painter's 'Whites and Creams color' for Outdoor Warm"),
+("1344876236", "01", "A2", "784-1970-2343434-2", "A broken Condensate Pump causes water leakage of air conditioning"),
+("1348433368", "02", "B2", "784-2001-1319348-5", "Finding Nemo 3D painting"), 
+("1345349700", "01", "A1", "784-2000-2004124-4", "Freon charging for 4 ( 2 Panasonic, 2 Samsung)");
+
+
