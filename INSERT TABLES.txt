@@ -13,6 +13,8 @@ SERVICE:
 
 department table:
 insert into department values ("A1", "AC", "01"),  ("A2", "AC", "01"), ("B1", "Painting", "02"), ("B2", "Painting", "02");
+
+employee table:
 insert into employee values ( "HM000124", "Mohammed Ahmed", "4000", "01", "A1"),
  ("HM000125", "Hussein Ahmed", "4000", "01", "A1"),
  ("HM000126", "Saleh Yassin", "4000", "01", "A1"),
